@@ -3,97 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Princess Bella • Ibu Cinta 💗</title>
+<title>Mabruk Alfa Mabruk, Umi Cinta 🎀</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:#713552;background:#fff0f7;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:
-radial-gradient(circle at 10% 10%,rgba(255,255,255,.9) 0 4px,transparent 5px),
-radial-gradient(circle at 85% 20%,rgba(255,255,255,.8) 0 3px,transparent 4px),
-radial-gradient(circle at 20% 75%,rgba(255,255,255,.8) 0 3px,transparent 4px);
-background-size:90px 90px,130px 130px,160px 160px;opacity:.7}
-.wrap{min-height:100vh;padding:28px 18px 50px;display:flex;align-items:center;justify-content:center}
-.card{width:min(100%,450px);position:relative;padding:28px 20px 32px;border-radius:38px;background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.95);box-shadow:0 25px 70px rgba(190,70,130,.22);backdrop-filter:blur(18px);text-align:center;overflow:hidden}
-.card:before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:#ffd4e8;filter:blur(8px);top:-130px;left:-80px;opacity:.7}
-.card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#ead6ff;filter:blur(10px);bottom:-100px;right:-60px;opacity:.7}
-.content{position:relative;z-index:2}
-.ribbon{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:30px;background:#fff;color:#cf4f8b;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;box-shadow:0 8px 20px rgba(200,70,130,.1)}
-.crown{font-size:54px;margin:12px 0 2px;filter:drop-shadow(0 8px 8px rgba(210,80,140,.18));animation:float 2.5s ease-in-out infinite}
-h1{font-family:'Playfair Display',serif;font-size:43px;line-height:1.05;margin:5px 0;color:#c83f7f}
-.name{font-family:'Playfair Display',serif;font-size:29px;color:#e15b99;margin:8px 0 2px}
-.sparkle{font-size:21px}
-.subtitle{font-size:14px;color:#9b607b;margin-top:8px}
-.divider{display:flex;align-items:center;gap:9px;margin:20px 8px;color:#e58aae}.divider:before,.divider:after{content:"";height:1px;flex:1;background:#f3c3d7}
-.message{padding:21px 18px;border-radius:28px;background:linear-gradient(145deg,#fff8fc,#fff0f7);border:1px solid #ffe0ed;box-shadow:inset 0 1px #fff;font-size:15px;line-height:1.75}
-.message b{color:#c93f7e;font-size:17px}
-.quote{margin:18px 0 0;padding:14px 12px;border-radius:20px;background:#fff;color:#a34f75;font-style:italic;font-size:14px}
-button{position:relative;z-index:3;border:0;margin-top:22px;padding:15px 25px;border-radius:999px;background:linear-gradient(135deg,#ef72ac,#cf3e83);color:#fff;font-weight:700;font-size:15px;box-shadow:0 12px 25px rgba(205,55,125,.28);transition:.2s}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;font-family:"Trebuchet MS",system-ui,sans-serif;color:#7d4264;background:linear-gradient(135deg,#ffd9ec,#fff4fa 45%,#eadbff)}
+.wrap{min-height:100vh;display:flex;justify-content:center;padding:28px 16px}
+.card{width:min(100%,480px);padding:28px 20px 32px;border:1.5px solid #fff;border-radius:38px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:0 24px 70px rgba(190,75,140,.22);text-align:center}
+.badge{display:inline-block;padding:10px 18px;border-radius:999px;background:#fff;color:#bf4d85;font-weight:800;letter-spacing:2px;box-shadow:0 8px 25px rgba(200,70,130,.12)}
+.crown{font-size:62px;margin:18px 0 2px;animation:float 2.2s ease-in-out infinite}
+h1{margin:5px 0 0;font-family:Georgia,serif;font-size:43px;line-height:1.05;color:#bb3978;text-shadow:2px 3px #fff}
+.name{font-family:Georgia,serif;font-size:28px;color:#d45a98;margin-top:10px}
+.sub{font-style:italic;margin:8px 0 18px;color:#98647e}
+.divider{display:flex;align-items:center;gap:12px;color:#e05d9d;margin:14px 0 20px}
+.divider:before,.divider:after{content:"";height:1.5px;background:#e9b5cf;flex:1}
+.message{background:linear-gradient(145deg,#fff8fc,#fff0f7);border:1px solid #f2cadd;border-radius:28px;padding:23px 18px;line-height:1.75}
+.message h2{font-size:20px;color:#bb3978;margin:0 0 13px}.message p{margin:12px 0}
+.quote{margin-top:18px;padding:16px;border-radius:20px;background:#fff;color:#a25278;font-style:italic;box-shadow:0 8px 22px rgba(190,75,140,.10)}
+button{border:0;margin-top:22px;padding:15px 25px;border-radius:999px;color:white;font-size:16px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,#ef72ad,#c93d84);box-shadow:0 12px 28px rgba(201,61,132,.28)}
 button:active{transform:scale(.96)}
-.extra{margin-top:20px;animation:appear .8s ease}
-.hidden{display:none}
-.giftbox{font-size:43px;margin:5px 0 10px}
-.wishes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
-.wish{padding:13px 8px;border-radius:20px;background:#fff;border:1px solid #ffe0ed;font-size:13px}
-.wish span{display:block;font-size:25px;margin-bottom:4px}
-.final{margin-top:18px;padding:20px;border-radius:25px;background:linear-gradient(135deg,#ffe0ee,#f3ddff);font-family:'Playfair Display',serif;font-size:20px;color:#ad3c76}
-.signature{margin-top:17px;font-size:13px;color:#a65a7c}
-.float{position:fixed;top:-50px;z-index:20;pointer-events:none;animation:fall linear forwards}
+.extra{display:none;margin-top:20px;padding:20px;border-radius:26px;background:#fff7fb;animation:appear .7s ease}.extra.show{display:block}
+.extra h2{color:#c13f7c}.signature{font-weight:800;color:#b73f77;margin-top:18px}.footer{margin-top:22px;font-size:13px;color:#b17b98}
+.float{position:fixed;top:-40px;pointer-events:none;z-index:20;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(115vh) rotate(360deg);opacity:0}}
-@keyframes float{50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes float{50%{transform:translateY(-10px) rotate(2deg)}}
 @keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
-@media(max-width:380px){h1{font-size:37px}.name{font-size:26px}.card{padding-left:15px;padding-right:15px}}
+@media(max-width:380px){h1{font-size:36px}.name{font-size:25px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<div class="card"><div class="content">
-<div class="ribbon">🎀 Special Birthday</div>
+<div class="wrap"><main class="card">
+<div class="badge">🎀 SPECIAL DAY 🎀</div>
 <div class="crown">👑</div>
-<h1>Happy Birthday</h1>
-<div class="name">Ibu Cinta 💗</div>
-<div class="subtitle">A little page made with lots of love ✨</div>
+<h1>Mabruk Alfa Mabruk</h1>
+<div class="name">Umi Cinta 🩷</div>
+<div class="sub">A little birthday page made with lots of love ✨</div>
 <div class="divider">🌷 💕 🌷</div>
-
-<div class="message">
-<b>Selamat ulang tahun, Ibu Cinta! 🎂</b>
-<p>Semoga hari istimewa ini dipenuhi senyum, kebahagiaan, kasih sayang, dan kejutan-kejutan kecil yang membuat hati hangat. 💐</p>
-<p>Semoga setiap doa baik menemukan jalannya, rezeki selalu dilancarkan, dan hari-hari ke depan semakin cantik untuk dijalani. ✨</p>
-<div class="quote">“Semoga bahagia selalu menjadi warna favorit di setiap harimu.” 💕</div>
-</div>
-
-<button onclick="openGift()">🎁 Buka kejutan spesial</button>
-
-<div id="extra" class="extra hidden">
-<div class="giftbox">🎀🎁🎀</div>
-<p><b>Untuk Ibu Cinta yang super spesial...</b></p>
-<div class="wishes">
-<div class="wish"><span>🌸</span>Hari-hari indah</div>
-<div class="wish"><span>💎</span>Rezeki berlimpah</div>
-<div class="wish"><span>🦋</span>Hati bahagia</div>
-<div class="wish"><span>👑</span>Selalu bersinar</div>
-</div>
-<div class="final">🎂 Happy Birthday, Ibu Cinta! 🎂<br><small>Semoga selalu disayang, dicintai, dan dikelilingi orang-orang baik. 💖</small></div>
-<div class="signature">With love, Princess Bella 🎀</div>
-</div>
-</div></div>
-</div>
+<section class="message">
+<h2>🎂 Selamat ulang tahun, Umi Cinta!</h2>
+<p>Mabruk Alfa Mabruk, Umi Cinta. 🩷 Mudahan panjang umur, sehat selalu, dimudahkan segala urusan dan dilancarkan rezekinya. ✨</p>
+<p>Semoga apa yang Umi Cinta cita-citakan, satu per satu dikabulkan dan menjadi kenyataan. 🤲🏻</p>
+<p>Semoga hari-hari Umi selalu dipenuhi kebahagiaan, cinta, senyuman, dan keberkahan. 🌸</p>
+<div class="quote">“Semoga semua doa baik menemukan jalannya, dan setiap langkah Umi dipenuhi kebahagiaan.” 💋🩷</div>
+</section>
+<button onclick="surprise()">🎁 Buka Kejutan Spesial</button>
+<section id="extra" class="extra">
+<div style="font-size:36px">💗🌸🎀🦋🎀🌸💗</div>
+<h2>Untuk Umi Cinta 🩷</h2>
+<p>Terima kasih sudah menjadi sosok yang begitu berharga. Semoga senyum Umi selalu ada dan setiap harinya membawa kabar-kabar baik. ✨</p>
+<h2>🎉 HAPPY BIRTHDAY UMI CINTA 🎉</h2>
+<p>Sehat selalu, panjang umur, bahagia selalu, dan semoga semua impian Umi dikabulkan. 🤍</p>
+<div class="signature">Dengan penuh cinta 💋🩷🎁</div>
+</section>
+<div class="footer">Made with love for Umi Cinta 🎀</div>
+</main></div>
 <script>
-function openGift(){
-document.getElementById('extra').classList.remove('hidden');
-const e=['💗','💕','💖','🌸','🌷','🎀','✨','🦋','💐','🤍'];
+function surprise(){
+document.getElementById("extra").classList.add("show");
+const emojis=["🩷","💕","💖","🌸","🌷","🎀","✨","🦋","💐","👑"];
 for(let i=0;i<55;i++){
-const x=document.createElement('div');x.className='float';
-x.textContent=e[Math.floor(Math.random()*e.length)];
-x.style.left=Math.random()*100+'vw';
-x.style.fontSize=14+Math.random()*22+'px';
-x.style.animationDuration=3+Math.random()*4+'s';
-document.body.appendChild(x);
-setTimeout(()=>x.remove(),7500);
-}
-setTimeout(()=>document.getElementById('extra').scrollIntoView({behavior:'smooth',block:'center'}),250);
-}
+const e=document.createElement("div");e.className="float";
+e.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+e.style.left=Math.random()*100+"vw";e.style.fontSize=(16+Math.random()*20)+"px";
+e.style.animationDuration=(3+Math.random()*4)+"s";e.style.animationDelay=(Math.random()*1.5)+"s";
+document.body.appendChild(e);setTimeout(()=>e.remove(),8500)}
+setTimeout(()=>document.getElementById("extra").scrollIntoView({behavior:"smooth"}),250)}
 </script>
 </body>
 </html>
