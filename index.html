@@ -1,359 +1,137 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Untuk Aa Adelia Cantik 💗</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      color: #70405b;
-      background:
-        radial-gradient(circle at 15% 15%, #ffffff 0 3px, transparent 4px),
-        radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 4px),
-        linear-gradient(135deg, #ffe4f0, #fff8fc 48%, #eee3ff);
-      background-size: 45px 45px, 65px 65px, auto;
-      overflow-x: hidden;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 760px;
-      margin: auto;
-      padding: 25px 15px 50px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.88);
-      border: 2px solid rgba(255, 255, 255, 0.95);
-      border-radius: 35px;
-      padding: 35px 22px;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(190, 75, 130, 0.18);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 11px 20px;
-      border-radius: 30px;
-      background: white;
-      color: #c34880;
-      font-weight: bold;
-      letter-spacing: 2px;
-      font-size: 14px;
-      box-shadow: 0 8px 25px rgba(190, 75, 130, 0.12);
-    }
-
-    .crown {
-      font-size: 75px;
-      margin-top: 20px;
-      animation: floating 3s ease-in-out infinite;
-    }
-
-    h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(48px, 13vw, 85px);
-      line-height: 0.95;
-      margin: 10px 0 5px;
-      color: #bd3d78;
-    }
-
-    h2 {
-      font-size: clamp(27px, 7vw, 42px);
-      margin: 5px 0;
-      color: #d35891;
-    }
-
-    .subtitle {
-      font-size: 17px;
-      color: #99657e;
-      margin: 16px auto 25px;
-      line-height: 1.7;
-    }
-
-    .flowers {
-      font-size: 28px;
-      letter-spacing: 7px;
-      margin: 10px 0;
-    }
-
-    .line {
-      height: 1px;
-      background: #edbfd4;
-      margin: 25px 0;
-    }
-
-    .message {
-      background: linear-gradient(145deg, #fff3f9, #ffe8f3);
-      border: 1px solid #f5cede;
-      border-radius: 28px;
-      padding: 27px 20px;
-      text-align: left;
-    }
-
-    .message h3 {
-      text-align: center;
-      color: #bb3d78;
-      font-size: 21px;
-      line-height: 1.5;
-      margin-top: 0;
-    }
-
-    .message p {
-      font-size: 16px;
-      line-height: 1.9;
-      margin: 15px 0;
-    }
-
-    .quote {
-      background: white;
-      border-radius: 22px;
-      padding: 19px;
-      margin-top: 20px;
-      text-align: center;
-      color: #ac507b;
-      font-style: italic;
-      line-height: 1.8;
-      box-shadow: 0 5px 20px rgba(180, 70, 120, 0.08);
-    }
-
-    .gift-button {
-      border: none;
-      border-radius: 999px;
-      padding: 17px 30px;
-      margin-top: 27px;
-      background: linear-gradient(90deg, #ea4f91, #c83e82);
-      color: white;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 12px 30px rgba(200, 62, 130, 0.3);
-      transition: 0.3s;
-    }
-
-    .gift-button:hover {
-      transform: scale(1.05);
-    }
-
-    .secret {
-      display: none;
-      margin-top: 22px;
-      padding: 23px;
-      background: white;
-      border-radius: 25px;
-      color: #995071;
-      animation: appear 0.6s ease;
-    }
-
-    .secret-icon {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .secret p {
-      line-height: 1.8;
-    }
-
-    footer {
-      margin-top: 27px;
-      font-size: 13px;
-      color: #b07894;
-    }
-
-    .heart {
-      position: fixed;
-      bottom: -40px;
-      font-size: 20px;
-      animation: naik 6s linear infinite;
-      pointer-events: none;
-      opacity: 0.7;
-    }
-
-    .heart:nth-child(1) {
-      left: 10%;
-      animation-delay: 0s;
-    }
-
-    .heart:nth-child(2) {
-      left: 30%;
-      animation-delay: 2s;
-    }
-
-    .heart:nth-child(3) {
-      left: 55%;
-      animation-delay: 1s;
-    }
-
-    .heart:nth-child(4) {
-      left: 78%;
-      animation-delay: 3s;
-    }
-
-    @keyframes floating {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px) rotate(2deg);
-      }
-    }
-
-    @keyframes naik {
-      0% {
-        transform: translateY(0) rotate(0deg);
-      }
-
-      100% {
-        transform: translateY(-110vh) rotate(25deg);
-      }
-    }
-
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Hati yang bergerak -->
-  <div class="heart">💗</div>
-  <div class="heart">💕</div>
-  <div class="heart">💖</div>
-  <div class="heart">💞</div>
-
-  <div class="container">
-
-    <div class="card">
-
-      <div class="badge">
-        🎀 SPECIAL FOR YOU 🎀
-      </div>
-
-      <div class="crown">
-        👑
-      </div>
-
-      <h1>Untuk Aa</h1>
-
-      <h2>Adelia Cantik 💗</h2>
-
-      <div class="subtitle">
-        Satu halaman kecil yang dibuat khusus<br>
-        dengan banyak rasa sayang ✨
-      </div>
-
-      <div class="flowers">
-        🌷 💕 🌷
-      </div>
-
-      <div class="line"></div>
-
-      <div class="message">
-
-        <h3>
-          💐 Mabruk Alfa Mabruk, Aa Adelia 💐
-        </h3>
-
-        <p>
-          Semoga Aa Adelia selalu diberikan umur yang panjang,
-          kesehatan, kebahagiaan, dan hati yang selalu dipenuhi
-          hal-hal baik. 🩷
-        </p>
-
-        <p>
-          Semoga rezekinya semakin lancar, semua urusannya
-          dimudahkan, dan apa pun yang Aa cita-citakan
-          perlahan-lahan menjadi kenyataan.
-        </p>
-
-        <p>
-          Semoga setiap hari Aa selalu ditemani senyum,
-          kasih sayang, kebahagiaan, dan kejutan-kejutan
-          manis yang membuat hati hangat. 🎁✨
-        </p>
-
-        <div class="quote">
-          “Tetap jadi Aa Adelia yang cantik, baik,
-          dan selalu punya alasan untuk tersenyum.
-          Semoga bahagia selalu menemukan Aa
-          di mana pun Aa berada.” 💕
-        </div>
-
-      </div>
-
-      <button class="gift-button" onclick="openSecret()">
-        🎁 Buka Pesan Rahasia
-      </button>
-
-      <div class="secret" id="secret">
-
-        <div class="secret-icon">
-          💖🌸💖
-        </div>
-
-        <strong>
-          Aa Adelia, ini khusus buat Aa! 🥰
-        </strong>
-
-        <p>
-          Semoga semua doa baik yang Aa panjatkan
-          menemukan jalannya.
-        </p>
-
-        <p>
-          Semoga langkah Aa selalu dipermudah,
-          rezekinya dilancarkan, dan senyumnya
-          jangan sampai hilang. 💗
-        </p>
-
-        <div style="font-size:30px;">
-          💌 ✨ 🎀
-        </div>
-
-      </div>
-
-      <footer>
-        Dibuat dengan cinta untuk Aa Adelia 💗
-      </footer>
-
-    </div>
-
-  </div>
-
-  <script>
-    function openSecret() {
-      const secret = document.getElementById("secret");
-
-      secret.style.display = "block";
-
-      secret.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-    }
-  </script>
-
-</body>
-</html>
+<div class="subtitle">
+  Sebuah halaman kecil, untuk seseorang yang begitu berarti di hati 💗✨
+</div>
+
+<div class="divider">
+  🌷 💕 🌷
+</div>
+
+<section class="message">
+
+<h2>🎂 Mabruk Alfa Mabruk, Kaka Ummi Cantik 💗</h2>
+
+<p>
+Hari ini adalah hari yang begitu istimewa,
+karena di hari ini Allah menghadirkan
+seorang perempuan yang begitu berarti
+ke dunia. 🌷
+</p>
+
+<p>
+Mabruk Alfa Mabruk, Kaka Ummi Cantik. 💕
+Semoga bertambahnya usia bukan hanya membawa
+angka yang baru, tetapi juga membawa
+lebih banyak kebahagiaan, ketenangan,
+kesehatan, dan keberkahan dalam setiap langkah Kaka Ummi.
+</p>
+
+<p>
+Semoga Allah selalu menjaga Kaka Ummi
+di mana pun berada. Semoga setiap lelah
+diganti dengan kebahagiaan, setiap kesedihan
+diganti dengan senyuman, dan setiap doa yang
+diam-diam Kaka Ummi panjatkan,
+perlahan menemukan jalan untuk menjadi kenyataan. 🤲✨
+</p>
+
+<p>
+Semoga rezeki Kaka Ummi selalu dilancarkan,
+urusannya selalu dimudahkan,
+hatinya selalu dikuatkan,
+dan langkahnya selalu ditemani oleh
+orang-orang yang tulus menyayangi. 💐
+</p>
+
+<p>
+Kalau suatu hari nanti perjalanan hidup terasa berat,
+semoga Kaka Ummi selalu ingat bahwa
+Kaka Ummi tidak harus menghadapi semuanya sendirian.
+Ada banyak doa baik yang selalu menyertai,
+dan ada orang-orang yang akan selalu berharap
+Kaka Ummi baik-baik saja. 🥺💗
+</p>
+
+<div class="quote">
+  “Semoga di usia yang baru ini,
+  Kaka Ummi menemukan lebih banyak alasan
+  untuk tersenyum, lebih banyak hal untuk disyukuri,
+  dan lebih banyak hari indah yang membuat hati berkata:
+  ternyata hidup ini begitu indah.” 🌸
+</div>
+
+</section>
+
+<button onclick="openSurprise()">
+🎁 Buka Pesan Kecil Untuk Kaka Ummi
+</button>
+
+<section id="surprise" class="surprise">
+
+<h2>💌 Untuk Kaka Ummi Cantik 💌</h2>
+
+<p>
+Kaka Ummi yang cantik, mungkin ucapan ini
+tidak seberapa dibandingkan semua kebaikan
+yang pernah Kaka Ummi berikan.
+Tapi dari hati yang paling tulus,
+semoga setiap kata di halaman kecil ini
+bisa menjadi pengingat bahwa
+Kaka Ummi adalah seseorang yang berharga. 💗
+</p>
+
+<p>
+Terima kasih sudah menjadi Kaka Ummi
+yang begitu berarti.
+Terima kasih untuk senyum,
+kebaikan, perhatian, dan hal-hal kecil
+yang mungkin terlihat sederhana,
+tetapi sebenarnya sangat berarti. 🌷
+</p>
+
+<p>
+Di hari ulang tahun ini,
+tidak banyak yang ingin didoakan selain:
+semoga Kaka Ummi selalu sehat,
+panjang umur dalam keberkahan,
+dilimpahkan rezeki yang baik,
+diberikan hati yang tenang,
+dan dipertemukan dengan
+sebanyak-banyaknya kebahagiaan. 🤲💕
+</p>
+
+<p>
+Semoga semua cita-cita yang masih disimpan
+dalam hati satu per satu menjadi kenyataan.
+Semoga semua perjalanan yang akan datang
+membawa Kaka Ummi ke tempat-tempat
+yang penuh dengan kebahagiaan. ✨
+</p>
+
+<p>
+<strong>
+Selamat ulang tahun, Kaka Ummi Cantik. 🎂👑💗
+Tetaplah menjadi diri Kaka Ummi yang hangat,
+baik, dan penuh kasih.
+Semoga senyum Kaka Ummi selalu menjadi
+senyum yang paling bahagia. 🌸
+</strong>
+</p>
+
+<div style="font-size:30px">
+🌸🌷💐💗🎁✨👑✨💗💐🌷🌸
+</div>
+
+</section>
+
+<div class="signature">
+  Dengan doa dan kasih sayang yang tulus 💕
+  <strong>
+    Untuk Kaka Ummi Cantik,
+    seseorang yang begitu berarti 🌷
+  </strong>
+</div>
+
+<div class="footer">
+  Semoga hari ini menjadi awal dari
+  banyak sekali kebahagiaan baru. 💗✨
+</div>
