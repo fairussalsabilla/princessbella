@@ -1,4 +1,45 @@
-<div class="subtitle">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kaka Ummi Cantik 💗</title>
+
+<style>
+.music-box {
+  text-align: center;
+  margin: 15px 0 25px;
+}
+
+.music-btn {
+  border: none;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff69b4, #e83e8c);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(232,62,140,.25);
+  cursor: pointer;
+}
+
+.music-btn:active {
+  transform: scale(.96);
+}
+</style>
+</head>
+
+<body>
+
+<div class="music-box">
+  <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+    🎵 Putar Musik Ulang Tahun
+  </button>
+
+  <audio id="birthdayMusic" loop>
+    <source src="saavane-happy-birthday-254480.mp3" type="audio/mpeg">
+  </audio>
+</div><div class="subtitle">
   Sebuah halaman kecil, untuk seseorang yang begitu berarti di hati 💗✨
 </div>
 
@@ -135,3 +176,20 @@ senyum yang paling bahagia. 🌸
   Semoga hari ini menjadi awal dari
   banyak sekali kebahagiaan baru. 💗✨
 </div>
+<script>
+function toggleMusic() {
+  const music = document.getElementById("birthdayMusic");
+  const button = document.getElementById("musicBtn");
+
+  if (music.paused) {
+    music.play();
+    button.innerHTML = "⏸️ Jeda Musik";
+  } else {
+    music.pause();
+    button.innerHTML = "🎵 Putar Musik Ulang Tahun";
+  }
+}
+</script>
+
+</body>
+</html>
