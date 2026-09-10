@@ -1,687 +1,1142 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Untuk Kaka Ummi Cantik 💗</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      color: #6d3654;
-      overflow-x: hidden;
-
-      background:
-        radial-gradient(circle at 10% 10%, #ffffff 0 3px, transparent 4px),
-        radial-gradient(circle at 80% 20%, #ffffff 0 3px, transparent 4px),
-        radial-gradient(circle at 30% 80%, #ffffff 0 3px, transparent 4px),
-        linear-gradient(135deg, #ffe5f0, #ffd1e4, #fff0f7);
-
-      background-size: 100px 100px, 130px 130px, 160px 160px, auto;
-    }
-
-    /* BUNGA TERBANG */
-    .flower {
-      position: fixed;
-      top: -50px;
-      font-size: 24px;
-      pointer-events: none;
-      z-index: 10;
-      animation: jatuh linear infinite;
-    }
-
-    .f1 { left: 8%; animation-duration: 8s; }
-    .f2 { left: 25%; animation-duration: 11s; animation-delay: 2s; }
-    .f3 { left: 45%; animation-duration: 9s; animation-delay: 4s; }
-    .f4 { left: 65%; animation-duration: 12s; animation-delay: 1s; }
-    .f5 { left: 85%; animation-duration: 10s; animation-delay: 3s; }
-
-    @keyframes jatuh {
-      0% {
-        transform: translateY(-50px) rotate(0deg);
-        opacity: 0;
-      }
-
-      15% {
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-
-    .container {
-      width: 100%;
-      max-width: 760px;
-      margin: auto;
-      padding: 45px 15px;
-    }
-
-    /* KARTU UTAMA */
-    .card {
-      position: relative;
-      background: rgba(255,255,255,0.93);
-      border: 2px solid #ffc1d9;
-      border-radius: 35px;
-      padding: 28px 22px 35px;
-
-      box-shadow:
-        0 15px 45px rgba(210, 65, 125, 0.20),
-        0 0 0 8px rgba(255,255,255,0.45);
-
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "🌸";
-      position: absolute;
-      top: 12px;
-      left: 15px;
-      font-size: 45px;
-      opacity: 0.35;
-      animation: goyang 3s ease-in-out infinite;
-    }
-
-    .card::after {
-      content: "🌷";
-      position: absolute;
-      bottom: 10px;
-      right: 15px;
-      font-size: 45px;
-      opacity: 0.35;
-      animation: goyang 3s ease-in-out infinite reverse;
-    }
-
-    @keyframes goyang {
-      0%,100% {
-        transform: rotate(-8deg);
-      }
-
-      50% {
-        transform: rotate(8deg) scale(1.08);
-      }
-    }
-
-    /* MUSIK */
-    .music-box {
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .music-btn {
-      border: none;
-      padding: 15px 25px;
-      border-radius: 999px;
-
-      background: linear-gradient(
-        135deg,
-        #ff69ad,
-        #e83e8c
-      );
-
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-
-      box-shadow:
-        0 8px 25px rgba(232,62,140,0.30);
-
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .music-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .music-btn:active {
-      transform: scale(0.96);
-    }
-
-    /* JUDUL */
-    .crown {
-      font-size: 58px;
-      margin: 8px 0;
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%,100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-8px);
-      }
-    }
-
-    h1 {
-      margin: 8px 0;
-      color: #d93682;
-      font-size: 42px;
-      font-family: Georgia, serif;
-      text-shadow: 0 3px 8px rgba(216,59,130,0.15);
-    }
-
-    .subtitle {
-      color: #9a5b78;
-      font-style: italic;
-      font-size: 17px;
-      line-height: 1.6;
-      margin: 10px 0;
-    }
-
-    .divider {
-      margin: 22px 0;
-      font-size: 27px;
-      letter-spacing: 7px;
-    }
-
-    /* BAGIAN UCAPAN */
-    .message {
-      text-align: left;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fff9fc,
-          #fff0f6
-        );
-
-      border: 1px solid #ffc5db;
-      border-radius: 25px;
-      padding: 23px;
-
-      box-shadow:
-        inset 0 0 25px rgba(255,145,190,0.08);
-    }
-
-    .message h2 {
-      text-align: center;
-      color: #d93682;
-      font-size: 25px;
-      line-height: 1.4;
-      margin-top: 0;
-    }
-
-    .message p {
-      font-size: 17px;
-      line-height: 1.8;
-      margin: 18px 0;
-    }
-
-    .message strong {
-      color: #c52f73;
-    }
-
-    /* QUOTE */
-    .quote {
-      margin: 25px 0;
-      padding: 18px 20px;
-
-      background: white;
-      border-left: 5px solid #f28ab6;
-      border-radius: 15px;
-
-      color: #874563;
-      font-style: italic;
-      line-height: 1.7;
-
-      box-shadow: 0 5px 20px rgba(210,65,125,0.08);
-    }
-
-    /* TOMBOL KEJUTAN */
-    .surprise-btn {
-      display: block;
-      margin: 25px auto 10px;
-
-      border: none;
-      padding: 15px 25px;
-      border-radius: 999px;
-
-      background: linear-gradient(
-        135deg,
-        #f59ac0,
-        #d93682
-      );
-
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-
-      box-shadow: 0 8px 20px rgba(210,65,125,0.25);
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .surprise-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .surprise-btn:active {
-      transform: scale(0.96);
-    }
-
-    /* KEJUTAN */
-    .extra {
-      display: none;
-
-      margin-top: 20px;
-      padding: 22px;
-
-      background: linear-gradient(
-        135deg,
-        #ffe0ed,
-        #fff4f9
-      );
-
-      border: 2px dashed #ef83ad;
-      border-radius: 25px;
-
-      text-align: center;
-      animation: muncul 0.5s ease;
-    }
-
-    .extra h2 {
-      color: #d93682;
-      margin-top: 0;
-    }
-
-    .extra p {
-      line-height: 1.8;
-    }
-
-    @keyframes muncul {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* BUNGA BESAR */
-    .flowers {
-      font-size: 30px;
-      margin-top: 25px;
-      letter-spacing: 5px;
-    }
-
-    /* TANDA TANGAN */
-    .signature {
-      margin-top: 28px;
-      padding: 22px;
-
-      background: rgba(255,255,255,0.75);
-      border: 1px solid #ffd0e1;
-      border-radius: 25px;
-
-      color: #87506a;
-      line-height: 1.8;
-      text-align: center;
-    }
-
-    /* FOOTER */
-    .footer {
-      margin-top: 25px;
-      color: #a25b7b;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    /* HP */
-    @media (max-width: 600px) {
-      .container {
-        padding: 35px 11px;
-      }
-
-      .card {
-        padding: 25px 15px 30px;
-        border-radius: 28px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      .crown {
-        font-size: 48px;
-      }
-
-      .message {
-        padding: 19px;
-      }
-
-      .message h2 {
-        font-size: 21px;
-      }
-
-      .message p {
-        font-size: 16px;
-        line-height: 1.75;
-      }
-
-      .music-btn,
-      .surprise-btn {
-        font-size: 15px;
-        padding: 13px 20px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Sist Najla Cayintik 🎀</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#7a2858;
+  background:
+    radial-gradient(circle at 10% 10%,#fff 0 45px,transparent 46px),
+    radial-gradient(circle at 90% 25%,#fff 0 35px,transparent 36px),
+    linear-gradient(
+      135deg,
+      #ffb6dc 0%,
+      #ff69b4 35%,
+      #ff1493 55%,
+      #ffc9e8 78%,
+      #fff0f8 100%
+    );
+}
+
+/* =========================
+   OPENING COUNTDOWN
+========================= */
+
+#opening{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.35),transparent 20%),
+    radial-gradient(circle at 80% 80%,rgba(255,255,255,.3),transparent 25%),
+    linear-gradient(135deg,#ff1493,#ff69b4,#ffb6dc);
+  color:#fff;
+  transition:opacity 1s ease,visibility 1s ease;
+}
+
+#opening.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
+.opening-crown{
+  font-size:55px;
+  animation:crownFloat 1.5s infinite ease-in-out;
+}
+
+@keyframes crownFloat{
+  0%,100%{transform:translateY(0) rotate(-5deg)}
+  50%{transform:translateY(-12px) rotate(5deg)}
+}
+
+#count{
+  font-size:130px;
+  line-height:1;
+  font-weight:900;
+  text-shadow:
+    0 6px 0 #d41476,
+    0 15px 35px rgba(100,0,50,.35);
+  animation:countPop .9s ease;
+}
+
+.opening-title{
+  margin-top:15px;
+  font-size:22px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-align:center;
+}
+
+.opening-sub{
+  margin-top:8px;
+  font-size:15px;
+  opacity:.9;
+}
+
+@keyframes countPop{
+  0%{
+    transform:scale(.15);
+    opacity:0;
+  }
+  65%{
+    transform:scale(1.2);
+    opacity:1;
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+
+/* =========================
+   BACKGROUND DECORATION
+========================= */
+
+.decor{
+  position:fixed;
+  pointer-events:none;
+  z-index:1;
+}
+
+.sparkle{
+  color:#fff;
+  font-size:28px;
+  animation:twinkle 1.8s infinite alternate;
+}
+
+.sp1{
+  top:9%;
+  left:7%;
+}
+
+.sp2{
+  top:20%;
+  right:8%;
+  animation-delay:.4s;
+}
+
+.sp3{
+  top:58%;
+  left:9%;
+  animation-delay:.8s;
+}
+
+.sp4{
+  bottom:13%;
+  right:9%;
+  animation-delay:1.2s;
+}
+
+.sp5{
+  top:42%;
+  right:17%;
+  font-size:18px;
+  animation-delay:1.6s;
+}
+
+@keyframes twinkle{
+  from{
+    opacity:.25;
+    transform:scale(.65) rotate(0deg);
+  }
+  to{
+    opacity:1;
+    transform:scale(1.35) rotate(25deg);
+  }
+}
+
+.ribbon{
+  position:fixed;
+  z-index:2;
+  font-size:70px;
+  opacity:.85;
+  pointer-events:none;
+}
+
+.ribbon.left{
+  top:25px;
+  left:15px;
+  transform:rotate(-15deg);
+}
+
+.ribbon.right{
+  top:25px;
+  right:15px;
+  transform:rotate(15deg);
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart{
+  position:fixed;
+  bottom:-60px;
+  z-index:4;
+  pointer-events:none;
+  animation:heartUp linear forwards;
+}
+
+@keyframes heartUp{
+  0%{
+    transform:translateY(0) rotate(0deg) scale(.7);
+    opacity:0;
+  }
+  10%{
+    opacity:1;
+  }
+  90%{
+    opacity:.9;
+  }
+  100%{
+    transform:translateY(-115vh) rotate(360deg) scale(1.3);
+    opacity:0;
+  }
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+  position:relative;
+  z-index:3;
+  width:min(94%,780px);
+  margin:auto;
+  padding:45px 0 70px;
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+  padding:38px 22px 30px;
+  border-radius:38px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.96),
+      rgba(255,240,248,.93)
+    );
+  border:4px solid rgba(255,255,255,.9);
+  box-shadow:
+    0 25px 70px rgba(116,0,66,.3),
+    0 0 0 5px rgba(255,105,180,.18);
+  text-align:center;
+  animation:cardAppear 1.3s ease;
+}
+
+.card:before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:#ff69b4;
+  opacity:.08;
+  top:-70px;
+  left:-70px;
+}
+
+.card:after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:#ff1493;
+  opacity:.06;
+  bottom:-110px;
+  right:-100px;
+}
+
+@keyframes cardAppear{
+  from{
+    opacity:0;
+    transform:translateY(80px) scale(.88);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   BARBIE HEADER
+========================= */
+
+.bow{
+  font-size:70px;
+  line-height:1;
+  animation:bowDance 2.4s infinite ease-in-out;
+  filter:drop-shadow(0 7px 8px rgba(255,20,147,.18));
+}
+
+@keyframes bowDance{
+  0%,100%{
+    transform:rotate(-4deg) scale(1);
+  }
+  50%{
+    transform:rotate(4deg) scale(1.08);
+  }
+}
+
+.small-title{
+  margin-top:10px;
+  color:#b52b79;
+  font-size:18px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+h1{
+  margin:8px 0 2px;
+  font-size:clamp(40px,10vw,76px);
+  line-height:1.05;
+  font-weight:900;
+  color:#ff1493;
+  text-shadow:
+    3px 3px 0 #ffd0e9,
+    6px 6px 0 rgba(255,20,147,.08);
+}
+
+.barbie-line{
+  margin:14px auto 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:#ff1493;
+  font-weight:900;
+  font-size:19px;
+}
+
+.barbie-line span{
+  display:inline-block;
+  height:3px;
+  width:70px;
+  border-radius:20px;
+  background:linear-gradient(90deg,transparent,#ff69b4);
+}
+
+.barbie-line span:last-child{
+  background:linear-gradient(90deg,#ff69b4,transparent);
+}
+
+/* =========================
+   PHOTO/EMOJI FRAME
+========================= */
+
+.gift-frame{
+  width:min(100%,520px);
+  margin:15px auto 24px;
+  padding:18px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff69b4,#ff1493,#ff9ed2);
+  box-shadow:
+    0 15px 35px rgba(255,20,147,.28),
+    inset 0 0 0 3px rgba(255,255,255,.45);
+}
+
+.gift-inner{
+  padding:25px 12px;
+  border-radius:22px;
+  background:
+    radial-gradient(circle,#fff 1px,transparent 2px) 0 0/18px 18px,
+    #fff0f8;
+}
+
+.big-birthday{
+  font-size:70px;
+  letter-spacing:7px;
+  animation:birthdayBounce 2.2s infinite;
+}
+
+@keyframes birthdayBounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+.gift-text{
+  margin-top:8px;
+  color:#ff1493;
+  font-size:25px;
+  font-weight:900;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-box{
+  margin:24px auto;
+  max-width:650px;
+  padding:25px 20px;
+  border-radius:28px;
+  background:rgba(255,255,255,.75);
+  border:2px dashed #ff8ac8;
+  box-shadow:0 10px 30px rgba(190,0,100,.1);
+}
+
+.message-box p{
+  margin:10px 0;
+  font-size:17px;
+  line-height:1.85;
+}
+
+.highlight{
+  color:#ff1493;
+  font-weight:900;
+}
+
+.name{
+  color:#d41476;
+  font-weight:900;
+}
+
+/* =========================
+   WISHES
+========================= */
+
+.wishes-title{
+  margin:28px 0 15px;
+  color:#ff1493;
+  font-size:25px;
+  font-weight:900;
+}
+
+.wishes{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.wish{
+  position:relative;
+  padding:20px 12px;
+  min-height:115px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  border-radius:25px;
+  background:linear-gradient(135deg,#fff,#ffe2f1);
+  border:2px solid #ffb0d8;
+  box-shadow:0 8px 20px rgba(190,0,100,.1);
+  font-weight:bold;
+  animation:littleFloat 3s infinite ease-in-out;
+}
+
+.wish:nth-child(2){
+  animation-delay:.35s;
+}
+
+.wish:nth-child(3){
+  animation-delay:.7s;
+}
+
+.wish:nth-child(4){
+  animation-delay:1.05s;
+}
+
+.wish:nth-child(5){
+  animation-delay:1.4s;
+}
+
+.wish:nth-child(6){
+  animation-delay:1.75s;
+}
+
+.wish-icon{
+  font-size:35px;
+  margin-bottom:6px;
+}
+
+@keyframes littleFloat{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-6px);
+  }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+  margin-top:28px;
+}
+
+button{
+  border:0;
+  margin:6px;
+  padding:15px 25px;
+  border-radius:50px;
+  color:#fff;
+  font-size:16px;
+  font-weight:900;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ff1493,#ff69b4);
+  box-shadow:0 9px 22px rgba(255,20,147,.3);
+  transition:.25s;
+}
+
+button:hover{
+  transform:translateY(-3px) scale(1.04);
+}
+
+button:active{
+  transform:scale(.96);
+}
+
+.music-button{
+  background:linear-gradient(135deg,#c21870,#ff85c8);
+}
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+#secret{
+  display:none;
+  margin:20px auto 0;
+  padding:20px;
+  border-radius:25px;
+  background:#fff0f8;
+  border:2px solid #ff8ac8;
+  animation:secretOpen .6s ease;
+}
+
+#secret.show{
+  display:block;
+}
+
+@keyframes secretOpen{
+  from{
+    opacity:0;
+    transform:scale(.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+  margin-top:30px;
+  color:#a63873;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-heart{
+  color:#ff1493;
+  font-size:20px;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  z-index:9998;
+  pointer-events:none;
+  animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:520px){
+
+  main{
+    width:94%;
+    padding:28px 0 50px;
+  }
+
+  .card{
+    padding:30px 15px 25px;
+    border-radius:30px;
+  }
+
+  h1{
+    font-size:42px;
+  }
+
+  .bow{
+    font-size:58px;
+  }
+
+  .small-title{
+    font-size:16px;
+  }
+
+  .message-box{
+    padding:20px 14px;
+  }
+
+  .message-box p{
+    font-size:15px;
+  }
+
+  .wishes{
+    gap:10px;
+  }
+
+  .wish{
+    min-height:105px;
+    font-size:14px;
+  }
+
+  .wish-icon{
+    font-size:30px;
+  }
+
+  .ribbon{
+    font-size:48px;
+  }
+
+  #count{
+    font-size:105px;
+  }
+
+  .opening-title{
+    font-size:18px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- BUNGA ANIMASI -->
-  <div class="flower f1">🌸</div>
-  <div class="flower f2">🌷</div>
-  <div class="flower f3">💗</div>
-  <div class="flower f4">🌺</div>
-  <div class="flower f5">🌸</div>
+<!-- =========================
+     OPENING
+========================= -->
 
-  <div class="container">
+<div id="opening">
 
-    <main class="card">
+  <div class="opening-crown">👑</div>
 
-      <!-- MUSIK -->
-      <div class="music-box">
+  <div id="count">3</div>
 
-        <button
-          class="music-btn"
-          id="musicBtn"
-          onclick="toggleMusic()"
-        >
-          🎵 Putar Musik Ulang Tahun
-        </button>
+  <div class="opening-title">
+    SPECIAL BIRTHDAY FOR
+  </div>
 
-        <audio id="birthdayMusic" loop>
-          <source
-            src="saavane-happy-birthday-254480.mp3"
-            type="audio/mpeg"
-          >
-        </audio>
+  <div class="opening-sub">
+    🎀 Sist Najla Cayintik 🎀
+  </div>
 
+</div>
+
+<!-- =========================
+     DECORATION
+========================= -->
+
+<div class="decor sparkle sp1">✦</div>
+<div class="decor sparkle sp2">✧</div>
+<div class="decor sparkle sp3">♡</div>
+<div class="decor sparkle sp4">✦</div>
+<div class="decor sparkle sp5">✧</div>
+
+<div class="ribbon left">🎀</div>
+<div class="ribbon right">🎀</div>
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="music" loop preload="auto">
+  <source src="saavane-happy-birthday-254480.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main>
+
+<section class="card">
+
+  <div class="bow">🎀</div>
+
+  <div class="small-title">
+    HAPPY BIRTHDAY TO
+  </div>
+
+  <h1>
+    Sist Najla<br>
+    Cayintik 💗
+  </h1>
+
+  <div class="barbie-line">
+    <span></span>
+    BARBIE GIRL 🎀
+    <span></span>
+  </div>
+
+  <!-- Birthday frame -->
+
+  <div class="gift-frame">
+    <div class="gift-inner">
+
+      <div class="big-birthday">
+        🎂 💗 🎁
       </div>
 
-      <!-- JUDUL -->
-      <div class="crown">👑</div>
-
-      <h1>
-        Untuk Kaka Ummi Cantik 💗
-      </h1>
-
-      <div class="subtitle">
-        Sebuah halaman kecil, untuk seseorang
-        yang begitu berarti di hati 💕✨
+      <div class="gift-text">
+        HAPPY BIRTHDAY!
       </div>
 
-      <div class="divider">
-        🌷 💕 🌷
+      <div style="
+        margin-top:8px;
+        color:#b52b79;
+        font-weight:bold;
+      ">
+        Untuk Sist Najla Cayintik ✨
       </div>
 
-      <!-- UCAPAN -->
-      <section class="message">
+    </div>
+  </div>
 
-        <h2>
-          🎂 Mabruk Alfa Mabruk,
-          Kaka Ummi Cantik 💗
-        </h2>
+  <!-- Message -->
 
-        <p>
-          Hari ini adalah hari yang begitu istimewa,
-          karena di hari ini Allah menghadirkan
-          seorang perempuan yang begitu berarti
-          ke dunia. 🌷
-        </p>
+  <div class="message-box">
 
-        <p>
-          <strong>
-            Mabruk Alfa Mabruk, Kaka Ummi Cantik. 💕
-          </strong>
-          Semoga bertambahnya usia bukan hanya
-          membawa angka yang baru, tetapi juga
-          membawa lebih banyak kebahagiaan,
-          ketenangan, kesehatan, dan keberkahan
-          dalam setiap langkah Kaka Ummi.
-        </p>
+    <p>
+      🎀 <span class="name">Selamat ulang tahun,
+      Sist Najla Cayintik!</span> 🎀
+    </p>
 
-        <p>
-          Semoga Allah selalu menjaga Kaka Ummi
-          di mana pun berada. Semoga setiap lelah
-          diganti dengan kebahagiaan, setiap
-          kesedihan diganti dengan senyuman,
-          dan setiap doa yang diam-diam Kaka Ummi
-          panjatkan, perlahan menemukan jalan
-          untuk menjadi kenyataan. 🤲✨
-        </p>
+    <p>
+      Hari ini adalah hari spesial untuk seseorang
+      yang sangat berharga. Semoga bertambahnya umur
+      membawa semakin banyak kebahagiaan,
+      keberkahan, dan cerita indah. 💕
+    </p>
 
-        <p>
-          Semoga rezeki Kaka Ummi selalu dilancarkan,
-          urusannya selalu dimudahkan, hatinya selalu
-          dikuatkan, dan langkahnya selalu ditemani
-          oleh orang-orang yang tulus menyayangi. 🌺
-        </p>
+    <p>
+      Semoga semua yang Sist Najla impikan
+      perlahan menjadi nyata.
+      Semoga langkahnya selalu dimudahkan,
+      rezekinya dilancarkan,
+      dan hatinya selalu dipenuhi kebahagiaan. 🌸
+    </p>
 
-        <p>
-          Kalau suatu hari nanti perjalanan hidup
-          terasa berat, semoga Kaka Ummi selalu ingat
-          bahwa Kaka Ummi tidak harus menghadapi
-          semuanya sendirian. Ada banyak doa baik
-          yang selalu menyertai, dan ada orang-orang
-          yang akan selalu berharap Kaka Ummi
-          baik-baik saja. 🥺💗
-        </p>
+    <p>
+      Tetap menjadi
+      <span class="highlight">
+        Sist Najla yang cantik, ceria,
+        lucu, dan cayintik
+      </span>
+      ya! 💗🎀
+    </p>
 
-        <div class="quote">
-          “Semoga di usia yang baru ini, Kaka Ummi
-          menemukan lebih banyak alasan untuk
-          tersenyum, lebih banyak hal untuk disyukuri,
-          dan lebih banyak hari indah yang membuat
-          hati berkata: ternyata hidup ini begitu
-          berharga.” 🌷✨
-        </div>
-
-        <p>
-          Terima kasih sudah menjadi Kaka Ummi
-          yang begitu berarti. Terima kasih untuk
-          senyum, kebaikan, perhatian, dan hal-hal
-          kecil yang mungkin terlihat sederhana,
-          tetapi sebenarnya sangat berarti. 🌹
-        </p>
-
-        <p>
-          Di hari ulang tahun ini, tidak banyak
-          yang ingin didoakan selain:
-          semoga Kaka Ummi selalu sehat,
-          panjang umur dalam keberkahan,
-          dilimpahkan rezeki yang baik,
-          diberikan hati yang tenang,
-          dan dipertemukan dengan sebanyak-banyaknya
-          kebahagiaan. 🤲💗
-        </p>
-
-        <p>
-          Semoga semua cita-cita yang masih disimpan
-          dalam hati satu per satu menjadi kenyataan.
-          Semoga semua perjalanan yang akan datang
-          membawa Kaka Ummi ke tempat-tempat yang
-          penuh dengan kebahagiaan. ✨
-        </p>
-
-        <p>
-          <strong>
-            Selamat ulang tahun, Kaka Ummi Cantik. 🎂👑💗
-            Tetaplah menjadi diri Kaka Ummi yang hangat,
-            baik, dan penuh kasih. Semoga senyum
-            Kaka Ummi selalu menjadi senyum yang
-            paling bahagia. 🌸
-          </strong>
-        </p>
-
-        <!-- TOMBOL KEJUTAN -->
-        <button
-          class="surprise-btn"
-          onclick="showSurprise()"
-        >
-          🎁 Buka Kejutan Spesial
-        </button>
-
-        <!-- ISI KEJUTAN -->
-        <div
-          class="extra"
-          id="surprise"
-        >
-
-          <h2>
-            💌 Pesan Kecil Untuk Kaka Ummi
-          </h2>
-
-          <p>
-            Kaka Ummi Cantik, mungkin halaman ini
-            sederhana, tetapi setiap kata di dalamnya
-            dibuat dengan doa yang baik. 💗
-          </p>
-
-          <p>
-            Semoga hari ini membuat Kaka Ummi
-            tersenyum lebih banyak, merasa lebih
-            disayangi, dan tahu bahwa keberadaan
-            Kaka Ummi sangat berarti. 🌷
-          </p>
-
-          <p>
-            Jangan lupa bahagia hari ini yaa...
-            karena hari ini adalah hari Kaka Ummi. 👑💕
-
-          </p>
-
-          <p>
-            <strong>
-              Sekali lagi...
-              MABRUK ALFA MABRUK,
-              KAKA UMMI CANTIK! 🎂🌸💗✨
-            </strong>
-          </p>
-
-        </div>
-
-        <div class="flowers">
-          🌸 🌷 💐 🎁 👑 ✨ 💗 🌷 🌸
-        </div>
-
-      </section>
-
-      <!-- TANDA TANGAN -->
-      <div class="signature">
-
-        Dengan doa dan kasih sayang yang tulus 💕
-
-        <br><br>
-
-        <strong>
-          Untuk Kaka Ummi Cantik,
-          <br>
-          seseorang yang begitu berarti 🌷
-        </strong>
-
-      </div>
-
-      <!-- FOOTER -->
-      <div class="footer">
-
-        Semoga hari ini menjadi awal dari
-        banyak sekali kebahagiaan baru. 💗✨
-
-        <br><br>
-
-        🌸 Made with love 🌸
-
-      </div>
-
-    </main>
+    <p>
+      Pokoknya hari ini harus
+      <b>senyum sebanyak-banyaknya!</b> 😘
+    </p>
 
   </div>
 
-  <script>
-    function toggleMusic() {
+  <!-- Wishes -->
 
-      const music =
-        document.getElementById("birthdayMusic");
+  <div class="wishes-title">
+    💕 Doa & Harapan 💕
+  </div>
 
-      const button =
-        document.getElementById("musicBtn");
+  <div class="wishes">
 
-      if (music.paused) {
+    <div class="wish">
+      <div class="wish-icon">🌸</div>
+      Sehat selalu
+    </div>
 
-        music.play()
-          .then(function () {
-            button.innerHTML =
-              "⏸️ Jeda Musik";
-          })
-          .catch(function () {
-            alert(
-              "Musik belum bisa diputar. Pastikan file MP3 sudah ada di repository."
-            );
-          });
+    <div class="wish">
+      <div class="wish-icon">💗</div>
+      Selalu bahagia
+    </div>
 
-      } else {
+    <div class="wish">
+      <div class="wish-icon">✨</div>
+      Semua impian tercapai
+    </div>
 
-        music.pause();
+    <div class="wish">
+      <div class="wish-icon">💎</div>
+      Makin sukses
+    </div>
 
-        button.innerHTML =
-          "🎵 Putar Musik Ulang Tahun";
-      }
-    }
+    <div class="wish">
+      <div class="wish-icon">🎀</div>
+      Makin cantik
+    </div>
+
+    <div class="wish">
+      <div class="wish-icon">💰</div>
+      Rezeki berlimpah
+    </div>
+
+  </div>
+
+  <!-- Buttons -->
+
+  <div class="buttons">
+
+    <button onclick="sendLove()">
+      💗 Kirim Cinta
+    </button>
+
+    <button
+      class="music-button"
+      id="musicBtn"
+      onclick="toggleMusic()"
+    >
+      🎵 Putar Musik
+    </button>
+
+    <button onclick="showSecret()">
+      🎀 Pesan Rahasia
+    </button>
+
+  </div>
+
+  <div id="secret">
+
+    <div style="font-size:42px">
+      💗🎀💗
+    </div>
+
+    <p style="
+      margin:10px 0 0;
+      font-weight:bold;
+      line-height:1.7;
+    ">
+      Sist Najla Cayintik,
+      jangan lupa kalau hari ini adalah
+      hari untuk bersinar! ✨
+      <br><br>
+      Senyum yang manis,
+      bahagia yang banyak,
+      dan jangan lupa traktir kue ulang tahun. 😆🎂
+      <br><br>
+      💕 Happy Birthday! 💕
+    </p>
+
+  </div>
+
+  <div class="footer">
+
+    <div class="footer-heart">
+      ♡ ♡ ♡
+    </div>
+
+    Dibuat dengan penuh cinta
+    khusus untuk
+    <b>Sist Najla Cayintik</b> 🎀
+
+    <br>
+
+    ✨ May your birthday be as pretty
+    as a Barbie dream world ✨
+
+  </div>
+
+</section>
+
+</main>
+
+<script>
+
+/* =========================
+   COUNTDOWN 3 - 2 - 1
+========================= */
+
+const opening = document.getElementById("opening");
+const count = document.getElementById("count");
+
+let number = 3;
+
+function animateCount(){
+
+  count.style.animation = "none";
+
+  void count.offsetWidth;
+
+  count.style.animation = "countPop .9s ease";
+
+}
+
+const countdownTimer = setInterval(function(){
+
+  number--;
+
+  if(number > 0){
+
+    count.textContent = number;
+
+    animateCount();
+
+  }else{
+
+    count.textContent = "🎀";
+
+    animateCount();
+
+    setTimeout(function(){
+
+      opening.classList.add("hide");
+
+      setTimeout(function(){
+        opening.style.display = "none";
+        createConfetti(45);
+        createHearts(20);
+
+        /*
+          Browser biasanya tidak mengizinkan
+          musik autoplay tanpa interaksi.
+          Jadi musik dimainkan melalui tombol.
+        */
+
+      },1000);
+
+    },700);
+
+    clearInterval(countdownTimer);
+
+  }
+
+},1000);
 
 
-    function showSurprise() {
+/* =========================
+   MUSIC
+========================= */
 
-      const surprise =
-        document.getElementById("surprise");
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
 
-      const button =
-        document.querySelector(".surprise-btn");
+function toggleMusic(){
 
-      if (
-        surprise.style.display === "block"
-      ) {
+  if(music.paused){
 
-        surprise.style.display = "none";
+    music.play()
+      .then(function(){
 
-        button.innerHTML =
-          "🎁 Buka Kejutan Spesial";
+        musicBtn.textContent = "⏸️ Jeda Musik";
 
-      } else {
+      })
+      .catch(function(){
 
-        surprise.style.display = "block";
+        alert(
+          "🎵 Tekan tombol sekali lagi untuk memulai musik ya 💗"
+        );
 
-        button.innerHTML =
-          "💗 Tutup Kejutan";
+      });
 
-        surprise.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-      }
-    }
-  </script>
+  }else{
+
+    music.pause();
+
+    musicBtn.textContent = "🎵 Putar Musik";
+
+  }
+
+}
+
+
+/* =========================
+   HEARTS
+========================= */
+
+function createHeart(){
+
+  const heart = document.createElement("div");
+
+  heart.className = "floating-heart";
+
+  const icons = [
+    "💗",
+    "💕",
+    "💖",
+    "💓",
+    "💞",
+    "🎀",
+    "♡"
+  ];
+
+  heart.textContent =
+    icons[Math.floor(Math.random()*icons.length)];
+
+  heart.style.left =
+    Math.random()*100 + "vw";
+
+  heart.style.fontSize =
+    (18 + Math.random()*28) + "px";
+
+  heart.style.animationDuration =
+    (4 + Math.random()*4) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(function(){
+    heart.remove();
+  },8000);
+
+}
+
+
+function createHearts(total){
+
+  for(let i=0;i<total;i++){
+
+    setTimeout(function(){
+      createHeart();
+    },i*160);
+
+  }
+
+}
+
+
+/* =========================
+   LOVE BUTTON
+========================= */
+
+function sendLove(){
+
+  createHearts(35);
+
+  createConfetti(30);
+
+  alert(
+    "💗💗💗\n\n" +
+    "Happy Birthday Sist Najla Cayintik! 🎀\n\n" +
+    "Semoga selalu bahagia,\n" +
+    "sehat, sukses, dan semua impian\n" +
+    "Sist Najla tercapai! ✨💕"
+  );
+
+}
+
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+function showSecret(){
+
+  const secret =
+    document.getElementById("secret");
+
+  secret.classList.toggle("show");
+
+  createHearts(12);
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(total){
+
+  const symbols = [
+    "💗",
+    "💕",
+    "✨",
+    "🎀",
+    "♡",
+    "✦"
+  ];
+
+  for(let i=0;i<total;i++){
+
+    const item =
+      document.createElement("div");
+
+    item.className = "confetti";
+
+    item.textContent =
+      symbols[
+        Math.floor(Math.random()*symbols.length)
+      ];
+
+    item.style.left =
+      Math.random()*100 + "vw";
+
+    item.style.fontSize =
+      (12 + Math.random()*20) + "px";
+
+    item.style.animationDuration =
+      (3 + Math.random()*4) + "s";
+
+    item.style.animationDelay =
+      Math.random()*1.5 + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(function(){
+      item.remove();
+    },8000);
+
+  }
+
+}
+
+
+/* =========================
+   BACKGROUND HEARTS
+========================= */
+
+setInterval(function(){
+
+  if(
+    opening.style.display === "none" ||
+    opening.classList.contains("hide")
+  ){
+
+    createHeart();
+
+  }
+
+},3000);
+
+</script>
 
 </body>
 </html>
